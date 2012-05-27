@@ -12,6 +12,7 @@ public  class ListSelector  implements ListSelectionListener {
 	{
 		// List selector needs to be configured 
 		
+		
         ListSelectionModel selection = (ListSelectionModel)listEvent.getSource();
         int firstIndex = listEvent.getFirstIndex();
         int lastIndex = listEvent.getLastIndex();

@@ -1,12 +1,15 @@
 package paketConverto;
+import javax.swing.BorderFactory;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JFrame;
+import javax.swing.JSeparator;
 import javax.swing.SwingConstants;
 
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Event;
@@ -21,16 +24,18 @@ public class CategoriesUnits extends StartPage
 {
 	JPanel panel1 = new JPanel();
     JFrame okvir2  = new JFrame("CONVERTO");
-
+    
    
     
 	public void CategoriesUnitsMet ()
 	{
-	    
+		
 		panel1.setLayout(null);
-	     panel1.setBackground(new Color(53,165,244));
-
-	     panel.setVisible(false);
+	    JLabel BCKGRND = new JLabel (new ImageIcon("C:\\users\\Ðuliæ\\desktop\\HARUN_FAKULTET\\blue_background.jpg")); 
+		panel1.add(BCKGRND);
+		BCKGRND.setBounds(0,0,990,600);
+		
+		panel.setVisible(false);
 	     okvir.setVisible(false);
 	     
 	
@@ -41,7 +46,6 @@ public class CategoriesUnits extends StartPage
 		okvir2.setLocation(100, 100);
 		okvir2.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\users\\Ðuliæ\\desktop\\HARUN_FAKULTET\\CovertoLogoALFAsmall.jpg"));
 		okvir2.setResizable(false);
-
 	JLabel instructions = new JLabel("select a category");
 	instructions.setFont(new Font("Century Gothic", 1, 21));
 	panel1.add(instructions);
@@ -59,39 +63,40 @@ public class CategoriesUnits extends StartPage
 	currency.addActionListener(new CategoryListener());
 	currency.setPreferredSize(new Dimension(200,60));
 	currency.setFont(new Font("Century Gothic", 1, 16));
-	panel1.add(currency);
+	BCKGRND.add(currency);
+	
 	
 	length.setBounds(130, 120, 200, 50);
 	length.addActionListener(new CategoryListener());
 	length.setPreferredSize(new Dimension(200,60));
 	length.setFont(new Font("Century Gothic", 1, 16));
-	panel1.add(length);
+	BCKGRND.add(length);
 	
 	weigth.setBounds(130, 190, 200, 50);
 	weigth.addActionListener(new CategoryListener());
 	weigth.setPreferredSize(new Dimension(200,60));
 	weigth.setFont(new Font("Century Gothic", 1, 16));
-	panel1.add(weigth);
+	BCKGRND.add(weigth);;
 	
 	
 	power.setBounds(130, 260, 200, 50);
 	power.addActionListener(new CategoryListener());
 	power.setPreferredSize(new Dimension(200,60));
 	power.setFont(new Font("Century Gothic", 1, 16));
-	panel1.add(power);
+	BCKGRND.add(power);
 	
 	
 	liquid.setBounds(130, 330, 200, 50);
 	liquid.addActionListener(new CategoryListener());
 	liquid.setPreferredSize(new Dimension(200,60));
 	liquid.setFont(new Font("Century Gothic", 1, 16));
-	panel1.add(liquid);
+	BCKGRND.add(liquid);
 	
 	back.setBounds(130, 460, 200, 50);
 	back.addActionListener(new CategoryListener());
 	back.setPreferredSize(new Dimension(200,60));
 	back.setFont(new Font("Century Gothic", 1, 16));
-	panel1.add(back);
+	BCKGRND.add(back);
 	
 	}
 	

@@ -6,6 +6,7 @@ import javax.swing.ActionMap;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JFrame;
@@ -26,6 +27,8 @@ import java.awt.TextField;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.KeyEvent;
 import java.io.InputStreamReader;
 
 import javax.swing.JPanel;
@@ -61,6 +64,7 @@ public abstract class Calculation extends CategoriesUnits implements ActionListe
 		 String[] currencyTO = {"EURO","USD","BAM"};
 		 JList currenciesTO = new JList(currencyFrom); 
 		
+
 		      
 		 currenciesFR.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		 panelC.add(currenciesFR);
@@ -73,7 +77,7 @@ public abstract class Calculation extends CategoriesUnits implements ActionListe
 
 		 listSelectionModel.addListSelectionListener(new ListSelector());
 
-	     
+			     
 	     
 	    
 	     
@@ -116,4 +120,5 @@ public abstract class Calculation extends CategoriesUnits implements ActionListe
 	}
 	
 	
+
 }

@@ -33,19 +33,24 @@ public class StartPage
 	     panel.setLayout(null);
 	   
 		dugme.setIcon(new ImageIcon	("C:\\users\\Ðuliæ\\desktop\\convertICON.png"));
-		JLabel logoPicture = new JLabel (new ImageIcon("C:\\users\\Ðuliæ\\desktop\\HARUN_FAKULTET\\ConvertoLogoALFA1.jpg")); 
+		/*JLabel logoPicture = new JLabel (new ImageIcon("C:\\users\\Ðuliæ\\desktop\\HARUN_FAKULTET\\ConvertoLogoALFA1.jpg")); 
 		panel.add(logoPicture);
 		logoPicture.setBounds(70,0,350,400);
+        */
+		
+		JLabel BCKGRND = new JLabel (new ImageIcon("C:\\users\\Ðuliæ\\desktop\\HARUN_FAKULTET\\startPage_LOGO.jpg")); 
+		panel.add(BCKGRND);
+		BCKGRND.setBounds(0,0,500,600);
 		
 		dugme.addActionListener(new EventClass());
 		dugme.setPreferredSize(new Dimension(250,60));
 		dugme.setFont(new Font("Century Gothic", 1, 22));
 		dugme.setBackground(Color.white);
 		dugme.setToolTipText("converte units");
-		dugme.setBounds(100, 400, 300, 80);
+		dugme.setBounds(100, 475, 300, 80);
 		
 		
-		panel.add(dugme);
+		BCKGRND.add(dugme);
         panel.setBackground(new Color(53,165,244));
 		
 			
