@@ -5,7 +5,7 @@ import javax.swing.JList;
 import javax.swing.JFrame;
 
 
-public class CategoryListener implements  ActionListener 
+public class CategoryListener extends Calculation implements  ActionListener 
 { 
 
 	  public void actionPerformed  (ActionEvent kategorijaDogadjaj1)
@@ -20,7 +20,8 @@ public class CategoryListener implements  ActionListener
 			if(izbor.equals("currency"))
 			{
 		
-		
+				CalculationMet();
+				
 			}
 			
 	  }

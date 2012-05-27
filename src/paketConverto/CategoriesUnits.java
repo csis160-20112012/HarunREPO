@@ -19,27 +19,29 @@ import javax.swing.JLabel;
 
 public class CategoriesUnits extends StartPage
 {
-	protected void CategoriesUnitsMet ()
+	JPanel panel1 = new JPanel();
+    JFrame okvir2  = new JFrame("CONVERTO");
+
+   
+    
+	public void CategoriesUnitsMet ()
 	{
-	     
+	    
+		panel1.setLayout(null);
+	     panel1.setBackground(new Color(53,165,244));
+
 	     panel.setVisible(false);
 	     okvir.setVisible(false);
-	     JPanel panel1 = new JPanel();
-	     panel1.setLayout(null);
-	     panel1.setBackground(new Color(53,165,244));
 	     
-	    JFrame okvir2  = new JFrame("CONVERTO");
-	    okvir2.add(panel1);
-		okvir2.setSize(500,600);
+	
+	 okvir2.add(panel1);
+		okvir2.setSize(990,600);
 		okvir2.setVisible(true);
 		okvir2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
-		okvir2.setLocation(300, 100);
+		okvir2.setLocation(100, 100);
 		okvir2.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\users\\Ðuliæ\\desktop\\HARUN_FAKULTET\\CovertoLogoALFAsmall.jpg"));
+		okvir2.setResizable(false);
 
-		
-	
-	
-	
 	JLabel instructions = new JLabel("select a category");
 	instructions.setFont(new Font("Century Gothic", 1, 21));
 	panel1.add(instructions);
@@ -92,5 +94,7 @@ public class CategoriesUnits extends StartPage
 	panel1.add(back);
 	
 	}
+	
+	
 	
 }

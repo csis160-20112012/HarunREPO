@@ -31,7 +31,7 @@ public class StartPage
   public static void  StartPageMet ()
 	{
 	     panel.setLayout(null);
-	    //JButton dugme = new JButton("start converting");		 
+	   
 		dugme.setIcon(new ImageIcon	("C:\\users\\Ðuliæ\\desktop\\convertICON.png"));
 		JLabel logoPicture = new JLabel (new ImageIcon("C:\\users\\Ðuliæ\\desktop\\HARUN_FAKULTET\\ConvertoLogoALFA1.jpg")); 
 		panel.add(logoPicture);
@@ -57,12 +57,8 @@ public class StartPage
 		okvir.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
 		okvir.setLocation(300, 100);
 		okvir.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\users\\Ðuliæ\\desktop\\HARUN_FAKULTET\\CovertoLogoALFAsmall.jpg"));
-		  
+		okvir.setResizable(false);
 	
-		JLabel tekst = new JLabel("Description TEXTDescription");
-	    tekst.setFont(new Font("Century Gothic", Font.PLAIN, 16));
-	    okvir.add(tekst);
-	    tekst.setVisible(true);
 	
 	}
 
