@@ -31,6 +31,7 @@ import java.io.InputStreamReader;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JRadioButtonMenuItem;
+import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.xml.bind.ParseConversionEvent;
 
@@ -43,31 +44,14 @@ public abstract class Calculation extends CategoriesUnits implements ActionListe
 	
 	
 	
-	public void CalculationMet()
+	public void CalculationCurr()
 	{
 		
-		panelC.setLayout(null);
-	    panelC.setBackground(new Color(53,165,244));
-
-	     panel.setVisible(false);
-	     okvir2.setVisible(false);
+		calcPanel();
 		
-		
-		 okvirC.add(panel1);
-		 okvirC.add(panelC);
-		 okvirC.setSize(500,400);
-		 okvirC.setVisible(true);
-		 okvirC.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);	
-		 okvirC.setLocation(500, 180);
-		 okvirC.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\users\\Ðuliæ\\desktop\\HARUN_FAKULTET\\CovertoLogoALFAsmall.jpg"));
-		 okvirC.setResizable(false);
-		 
-          
 		String amount;
 		amount = JOptionPane.showInputDialog(okvirC, "Input the Amount You wish to Convert");
 		
-		
-	
 		int fromAmount;
 		fromAmount = Integer.parseInt ( amount); 
 		
@@ -76,16 +60,7 @@ public abstract class Calculation extends CategoriesUnits implements ActionListe
 		 JList currenciesFR = new JList(currencyFrom);    
 		 String[] currencyTO = {"EURO","USD","BAM"};
 		 JList currenciesTO = new JList(currencyFrom); 
-		 
-		 JLabel from = new JLabel();
-		 from.setText("From:"); 
-		 panelC.add(from);
-		 from.setBounds(50, 20, 100, 10);
 		
-		 JLabel to = new JLabel();
-		 to.setText("To:");
-		 panelC.add(to);
-		 to.setBounds(250, 20, 100, 10);
 		      
 		 currenciesFR.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		 panelC.add(currenciesFR);
@@ -94,18 +69,51 @@ public abstract class Calculation extends CategoriesUnits implements ActionListe
 		 currenciesTO.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		 panelC.add(currenciesTO);
 		 currenciesTO.setBounds(250, 50, 100, 100);
-		 
-		 
-		
-		 
-		; 
-		
-				
-		
-		
-		
-		
-	
-	
+		 ListSelectionModel listSelectionModel = currenciesFR.getSelectionModel();
+
+		 listSelectionModel.addListSelectionListener(new ListSelector());
+
+	     
+	     
+	    
+	     
 	}
+	
+	
+	
+	
+	
+	
+	public void calcPanel()
+	{
+    panelC.setLayout(null);
+	
+    panelC.setBackground(new Color(53,165,244));
+
+     panel.setVisible(false);
+     okvir2.setVisible(false);
+	
+	
+	 okvirC.add(panel1);
+	 okvirC.add(panelC);
+	 okvirC.setSize(500,400);
+	 okvirC.setVisible(true);
+	 okvirC.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);	
+	 okvirC.setLocation(500, 180);
+	 okvirC.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\users\\Ðuliæ\\desktop\\HARUN_FAKULTET\\CovertoLogoALFAsmall.jpg"));
+	 okvirC.setResizable(false);
+	 
+	 
+	 JLabel from = new JLabel();
+	 from.setText("From:"); 
+	 panelC.add(from);
+	 from.setBounds(50, 20, 100, 10);
+	
+	 JLabel to = new JLabel();
+	 to.setText("To:");
+	 panelC.add(to);
+	 to.setBounds(250, 20, 100, 10);
+	}
+	
+	
 }

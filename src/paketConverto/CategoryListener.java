@@ -1,8 +1,7 @@
 package paketConverto;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JList;
-import javax.swing.JFrame;
+
 
 
 public class CategoryListener extends Calculation implements  ActionListener 
@@ -16,11 +15,12 @@ public class CategoryListener extends Calculation implements  ActionListener
 			if(izbor.equals("back"))
 			{
 				
+				
 			}
 			if(izbor.equals("currency"))
 			{
 		
-				CalculationMet();
+				CalculationCurr();
 				
 			}
 			
