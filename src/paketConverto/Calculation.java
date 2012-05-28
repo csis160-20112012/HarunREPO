@@ -11,6 +11,7 @@ import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JFrame;
 import javax.swing.JRadioButton;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.ListModel;
 import javax.swing.ListSelectionModel;
@@ -51,37 +52,165 @@ public abstract class Calculation extends CategoriesUnits implements ActionListe
 	{
 		
 		calcPanel();
-		
-		String amount;
+		//final double result=0;
+		final String amount;
 		amount = JOptionPane.showInputDialog(okvirC, "Input the Amount You wish to Convert");
+		 
+			
+			
 		
-		int fromAmount;
-		fromAmount = Integer.parseInt ( amount); 
+		
 		
 		
 		 String[] currencyFrom = {"EURO","USD","BAM"};
-		 JList currenciesFR = new JList(currencyFrom);    
+		 final JList currenciesFR = new JList(currencyFrom);    
 		 String[] currencyTO = {"EURO","USD","BAM"};
-		 JList currenciesTO = new JList(currencyFrom); 
+		 final JList currenciesTO = new JList(currencyFrom); 
 		
 
 		      
 		 currenciesFR.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		 panelC.add(currenciesFR);
 		 currenciesFR.setBounds(50, 50, 100, 100);
+		 currenciesFR.setSelectedIndex(0);
+		 
+
+		 
 		 
 		 currenciesTO.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		 panelC.add(currenciesTO);
-		 currenciesTO.setBounds(250, 50, 100, 100);
-		 ListSelectionModel listSelectionModel = currenciesFR.getSelectionModel();
+		 
+		 
+		currenciesTO.setBounds(250, 50, 100, 100);
+		 currenciesTO.setSelectedIndex(0);
+	
+		 currenciesFR.addListSelectionListener(new ListSelectionListener()
+		 {
+				public void valueChanged(ListSelectionEvent fr)
+				{
+					
+				
+			   
+					currenciesTO.addListSelectionListener(new ListSelectionListener()
+					{
+						 
+							
+						public void valueChanged(ListSelectionEvent to)
+							{
+							JTextArea resultText = new JTextArea();
+							   resultText.setText("COVNERTED :\n");
+							   panelC.add(resultText);
+							   resultText.setBounds(150, 240, 150, 50);
+							   final int fromAmount;
+								fromAmount = Integer.parseInt ( amount);
+								double result=0;
+							
+							
+				if (currenciesFR.getSelectedIndex() == 0)
+					{ 
+					
+					if (currenciesTO.getSelectedIndex()== 0)
+					{
+						//euro and euro chosen, so balance is 1
+	             	double curr = 1;	
+	             	result=fromAmount*curr;
+	             	             	
+	             	resultText.setText("COVNERTED :\n"+result +" €");
+				    }
+					if (currenciesTO.getSelectedIndex()== 1)
+						{
+						//euro and usd chosen
+		             	double curr = 1.4241;	
+		             	result=fromAmount*curr;
+		             	
+		             	resultText.setText("COVNERTED :\n"+result +" $");
+					    }
+		             
+		             if (currenciesTO.getSelectedIndex()== 2)
+						{
+		            	//euro and bam chosen
+		             	double curr = 1.9534;
+		             	result=fromAmount*curr;
+		             	resultText.setText("COVNERTED :\n"+result +" KM");
 
-		 listSelectionModel.addListSelectionListener(new ListSelector());
-
-			     
-	     
-	    
-	     
-	}
+		                	}
+	            	 
+				    }
+					
+	             
+	             if (currenciesFR.getSelectedIndex()== 1)
+					{
+	            	 if (currenciesTO.getSelectedIndex()== 0)
+						{
+							//usd and euro chosen
+		             	double curr = 0.83256;	
+		             	result=fromAmount*curr;		             	             	
+		             	resultText.setText("COVNERTED :\n"+result +" €");
+		             	
+					    }
+						if (currenciesTO.getSelectedIndex()== 1)
+							{
+							//usd and usd chosen, so balance is 1
+			             	double curr = 1;	
+			             	result=fromAmount*curr;
+			             	
+			             	resultText.setText("COVNERTED :\n"+result +" $");
+						    }
+			             
+			             if (currenciesTO.getSelectedIndex()== 2)
+							{
+			            	//usd and bam chosen
+			             	double curr = 1.532;
+			             	result=fromAmount*curr;
+			             	resultText.setText("COVNERTED :\n"+result+" KM");
+	            						    
+				    }
+	             
+	             if (currenciesFR.getSelectedIndex()== 2)
+					{
+	            	 if (currenciesTO.getSelectedIndex()== 1)
+						{
+							//euro and euro chosen, so balance is 1
+		             	double curr = 1;	
+		             	result=fromAmount*curr;
+		             	             	
+		             	resultText.setText("COVNERTED :\n"+result);
+					    }
+						if (currenciesTO.getSelectedIndex()== 1)
+							{
+							//euro and usd chosen
+			             	double curr = 1.4;	
+			             	result=fromAmount*curr;
+			             	
+			             	resultText.setText("COVNERTED :\n"+result);
+						    }
+			             
+			             if (currenciesTO.getSelectedIndex()== 2)
+							{
+			            	//euro and bam chosen
+			             	double curr = 1.7;
+			             	result=fromAmount*curr;
+			             	resultText.setText("COVNERTED :\n"+result);
+					}
+	            	 
+	                	}
+							
+				
+				}
+				}
+					});
+		    
+				
+				}}
+				 );}
+		   
+		   
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -118,7 +247,12 @@ public abstract class Calculation extends CategoriesUnits implements ActionListe
 	 panelC.add(to);
 	 to.setBounds(250, 20, 100, 10);
 	}
-	
+		 
 	
 
 }
+	
+		 
+	
+		 
+
