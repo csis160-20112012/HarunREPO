@@ -70,19 +70,21 @@ public abstract class Calculation extends CategoriesUnits implements ActionListe
 
 		      
 		 currenciesFR.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		 currenciesFR.setFont(new Font("Century Gothic", 1, 19));
+		 currenciesFR.setForeground(Color.white);
+		 currenciesFR.setBackground(Color.blue);
 		 panelC.add(currenciesFR);
-		 currenciesFR.setBounds(50, 50, 100, 100);
-		 currenciesFR.setSelectedIndex(0);
-		 
-
+		 currenciesFR.setBounds(70, 70, 100, 100);
 		 
 		 
 		 currenciesTO.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		 panelC.add(currenciesTO);
+		 currenciesTO.setFont(new Font("Century Gothic", 1, 19));
+		 currenciesTO.setForeground(Color.white);
+		 currenciesTO.setBackground(Color.blue);
+		 currenciesTO.setBounds(270, 70, 100, 100);
 		 
 		 
-		currenciesTO.setBounds(250, 50, 100, 100);
-		 currenciesTO.setSelectedIndex(0);
 	
 		 currenciesFR.addListSelectionListener(new ListSelectionListener()
 		 {
@@ -96,13 +98,17 @@ public abstract class Calculation extends CategoriesUnits implements ActionListe
 						 
 							
 						public void valueChanged(ListSelectionEvent to)
-							{
+							{													
 							JTextArea resultText = new JTextArea();
-							   resultText.setText("COVNERTED :\n");
+							   resultText.setText("  CONVERTED : ");
+							   resultText.setFont(new Font("Century Gothic", 1, 22));
+							   resultText.setForeground(Color.white);
+							   resultText.setBackground(Color.blue);
+
 							   panelC.add(resultText);
-							   resultText.setBounds(150, 240, 150, 50);
-							   final int fromAmount;
-								fromAmount = Integer.parseInt ( amount);
+							   resultText.setBounds(70, 250, 400, 30);
+							   final double fromAmount;
+								fromAmount = Integer.parseInt(amount);
 								double result=0;
 							
 							
@@ -112,26 +118,27 @@ public abstract class Calculation extends CategoriesUnits implements ActionListe
 					if (currenciesTO.getSelectedIndex()== 0)
 					{
 						//euro and euro chosen, so balance is 1
-	             	double curr = 1;	
+						double curr = 1;	
 	             	result=fromAmount*curr;
 	             	             	
-	             	resultText.setText("COVNERTED :\n"+result +" €");
+	             	resultText.setText("  CONVERTED : "+result +" €");
 				    }
 					if (currenciesTO.getSelectedIndex()== 1)
 						{
 						//euro and usd chosen
-		             	double curr = 1.4241;	
+						double curr = 1.4241;	
 		             	result=fromAmount*curr;
 		             	
-		             	resultText.setText("COVNERTED :\n"+result +" $");
+		             	resultText.setText("  CONVERTED : "+result +" $");
 					    }
 		             
 		             if (currenciesTO.getSelectedIndex()== 2)
 						{
 		            	//euro and bam chosen
-		             	double curr = 1.9534;
+		            	 double curr = 1.9534;
 		             	result=fromAmount*curr;
-		             	resultText.setText("COVNERTED :\n"+result +" KM");
+		             	
+		             	resultText.setText("  CONVERTED : "+result +" KM");
 
 		                	}
 	            	 
@@ -143,26 +150,26 @@ public abstract class Calculation extends CategoriesUnits implements ActionListe
 	            	 if (currenciesTO.getSelectedIndex()== 0)
 						{
 							//usd and euro chosen
-		             	double curr = 0.83256;	
+	            		 double curr =  0.83256;	
 		             	result=fromAmount*curr;		             	             	
-		             	resultText.setText("COVNERTED :\n"+result +" €");
+		             	resultText.setText("  CONVERTED : "+result +" €");
 		             	
 					    }
 						if (currenciesTO.getSelectedIndex()== 1)
 							{
 							//usd and usd chosen, so balance is 1
-			             	double curr = 1;	
+							float curr = 1;	
 			             	result=fromAmount*curr;
 			             	
-			             	resultText.setText("COVNERTED :\n"+result +" $");
-						    }
+			             	resultText.setText("  CONVERTED : "+result +" $");
+						    } 
 			             
 			             if (currenciesTO.getSelectedIndex()== 2)
 							{
 			            	//usd and bam chosen
-			             	double curr = 1.532;
+			            	 double curr = 1.532;
 			             	result=fromAmount*curr;
-			             	resultText.setText("COVNERTED :\n"+result+" KM");
+			             	resultText.setText("  CONVERTED : "+result+" KM");
 	            						    
 				    }
 	             
@@ -171,31 +178,31 @@ public abstract class Calculation extends CategoriesUnits implements ActionListe
 	            	 if (currenciesTO.getSelectedIndex()== 1)
 						{
 							//euro and euro chosen, so balance is 1
-		             	double curr = 1;	
+	            		 float curr = 1;	
 		             	result=fromAmount*curr;
 		             	             	
-		             	resultText.setText("COVNERTED :\n"+result);
+		             	resultText.setText("  CONVERTED : "+result);
 					    }
 						if (currenciesTO.getSelectedIndex()== 1)
 							{
 							//euro and usd chosen
-			             	double curr = 1.4;	
+							double curr = 1.4;	
 			             	result=fromAmount*curr;
 			             	
-			             	resultText.setText("COVNERTED :\n"+result);
+			             	resultText.setText("  CONVERTED : "+result);
 						    }
 			             
 			             if (currenciesTO.getSelectedIndex()== 2)
 							{
 			            	//euro and bam chosen
-			             	double curr = 1.7;
+			            	 double curr =  1.7;
 			             	result=fromAmount*curr;
-			             	resultText.setText("COVNERTED :\n"+result);
-					}
+			             	resultText.setText("  CONVERTED : "+result);
+					} 
 	            	 
 	                	}
 							
-				
+	             
 				}
 				}
 					});
@@ -221,7 +228,7 @@ public abstract class Calculation extends CategoriesUnits implements ActionListe
 	{
     panelC.setLayout(null);
 	
-    panelC.setBackground(new Color(53,165,244));
+    panelC.setBackground(Color.blue);
 
      panel.setVisible(false);
      okvir2.setVisible(false);
@@ -233,19 +240,23 @@ public abstract class Calculation extends CategoriesUnits implements ActionListe
 	 okvirC.setVisible(true);
 	 okvirC.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);	
 	 okvirC.setLocation(500, 180);
-	 okvirC.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\users\\Ðuliæ\\desktop\\HARUN_FAKULTET\\CovertoLogoALFAsmall.jpg"));
+	 okvirC.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\users\\Ðuliæ\\desktop\\HARUN_FAKULTET\\logoIconSmall.jpg"));
 	 okvirC.setResizable(false);
 	 
 	 
 	 JLabel from = new JLabel();
 	 from.setText("From:"); 
+	 from.setFont(new Font("Century Gothic", 1, 22));	 
+	 from.setForeground(Color.white);
 	 panelC.add(from);
-	 from.setBounds(50, 20, 100, 10);
+	 from.setBounds(70, 20, 100, 50);
 	
 	 JLabel to = new JLabel();
 	 to.setText("To:");
+	 to.setFont(new Font("Century Gothic", 1, 22));
+	 to.setForeground(Color.white);
 	 panelC.add(to);
-	 to.setBounds(250, 20, 100, 10);
+	 to.setBounds(270, 20, 100, 50);
 	}
 		 
 	

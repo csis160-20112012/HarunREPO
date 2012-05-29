@@ -44,7 +44,7 @@ public class CategoriesUnits extends StartPage
 		okvir2.setVisible(true);
 		okvir2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
 		okvir2.setLocation(100, 100);
-		okvir2.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\users\\Ðuliæ\\desktop\\HARUN_FAKULTET\\CovertoLogoALFAsmall.jpg"));
+		okvir2.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\users\\Ðuliæ\\desktop\\HARUN_FAKULTET\\logoIconSmall.jpg"));
 		okvir2.setResizable(false);
 	JLabel instructions = new JLabel("select a category");
 	instructions.setFont(new Font("Century Gothic", 1, 21));

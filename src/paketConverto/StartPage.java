@@ -61,7 +61,7 @@ public class StartPage
 		okvir.setVisible(true);
 		okvir.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
 		okvir.setLocation(300, 100);
-		okvir.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\users\\Ðuliæ\\desktop\\HARUN_FAKULTET\\CovertoLogoALFAsmall.jpg"));
+		okvir.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\users\\Ðuliæ\\desktop\\HARUN_FAKULTET\\logoIconSmall.jpg"));
 		okvir.setResizable(false);
 	
 	
