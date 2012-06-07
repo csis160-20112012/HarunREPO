@@ -33,10 +33,8 @@ public class StartPage
 	     panel.setLayout(null);
 	   
 		dugme.setIcon(new ImageIcon	("C:\\users\\Ðuliæ\\desktop\\convertICON.png"));
-		/*JLabel logoPicture = new JLabel (new ImageIcon("C:\\users\\Ðuliæ\\desktop\\HARUN_FAKULTET\\ConvertoLogoALFA1.jpg")); 
-		panel.add(logoPicture);
-		logoPicture.setBounds(70,0,350,400);
-        */
+		
+       
 		
 		JLabel BCKGRND = new JLabel (new ImageIcon("C:\\users\\Ðuliæ\\desktop\\HARUN_FAKULTET\\startPage_LOGO.jpg")); 
 		panel.add(BCKGRND);
