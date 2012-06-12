@@ -1,24 +1,34 @@
 package paketConverto;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+/**
+* @author Harun Djulic
+* @version JavaSE-1.6 
+* The class implements button listeners (ie. ActionListener), and a method actionPerformed
+*  
 
+*/
 
 public class CategoryListener extends Calculation implements  ActionListener 
 { 
+	/**
+	    * @author Vedad Causevic
+	    * JavaSE-1.6 
+	    * @param izbor gets the Action Command 
+	    * method defines what to do when individual  button from CategoriesUnits panel  is pressed
+	    * defines which methods are called for each button press
+	    	
+	    	    */
 
 	  public void actionPerformed  (ActionEvent kategorijaDogadjaj1)
 
 	{
 
 			String izbor = kategorijaDogadjaj1.getActionCommand();
-			if(izbor.equals("about"))
-			{
-				// nesto ubaciti o projektu ?
-
-			}
+	
 			if(izbor.equals("currency"))
 			{
-				CalculationCurr();
+			CalculationCurr();
 
 			}
 			

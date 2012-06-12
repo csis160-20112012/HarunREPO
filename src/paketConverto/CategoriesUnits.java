@@ -10,12 +10,35 @@ import java.awt.Toolkit;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 
+
+/**
+* @author Harun Djulic
+* @version JavaSE-1.6 
+* The class defines the frame,panel and buttons for the categories.
+*  
+
+*/
 public class CategoriesUnits extends StartPage //implements CalculationCurr
 {
 	JPanel panel1 = new JPanel();
     JFrame okvir2  = new JFrame("CONVERTO");
     JLabel BCKGRND = new JLabel (new ImageIcon("C:\\Users\\Harun\\Desktop\\PROJECT.TEST\\Images\\icons\\background.jpg")); 
    
+    /**
+    * @author Harun Djulic
+    * JavaSE-1.6 
+    * @param okvir2  defines the frame,adds the panel and buttons for the categories.
+    * @param panel1  adds buttons for the categories.
+    * @param currency  defines the button for choosing the currency
+    * @param length  defines the button for choosing the length
+    * @param weight  defines the button for choosing the weight
+    * @param power   defines the button for choosing the power
+    * @param volume  defines the button for choosing the volume
+    * @param area    defines the button for choosing the area
+    * @param temperature   defines the button for choosing the temperature 
+    * @param instructions  defines the JLabel label for simple line of text
+
+    */
     
 	public void CategoriesUnitsMet ()
 	{

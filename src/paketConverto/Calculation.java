@@ -15,9 +15,15 @@ import javax.swing.JLabel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
+/**
+* @author Harun Djulic & Amar Svraka
+* @version JavaSE-1.6 
+* The class defines the frame,panel and methods for calculation in the categories button.
+*  
 
+*/
 
-public abstract class Calculation extends CategoriesUnits implements ActionListener {
+public abstract class Calculation extends CategoriesUnits implements ActionListener { 
 
 	JPanel panelC = new JPanel();
     JFrame okvirC  = new JFrame("calculate");
@@ -26,7 +32,19 @@ public abstract class Calculation extends CategoriesUnits implements ActionListe
     final JTextArea precisionOf = new JTextArea();
    
 // EVERY METHOD NEEDS TO SPECIFY THE okvirC size and bounds !
-
+    /**
+     * @author Harun Djulic & Amar Svraka
+     * JavaSE-1.6 
+     * @param okvirC   defines the frame, title, size and location of a frame (same for other Calculation methods in this class).
+     * @param panelC   defines the panel, and the color of the panel
+     * @param currenciesFR  the list for "from" values (same for other Calculation methods in this class).
+     * @param currenciesTO  the list for "to" values (same for other Calculation methods in this class).
+     * @param input  the field for inputing the value to convert (same for other Calculation methods in this class).
+     * @param round  the fiel for inputing the value to which to round the result (same for other Calculation methods in this class).
+     *
+     * */
+    
+    
 	public void CalculationCurr()
 	{
 
@@ -472,7 +490,15 @@ public abstract class Calculation extends CategoriesUnits implements ActionListe
 				 );}
 
 
-	
+	  /**
+     * @author Harun Djulic
+     * JavaSE-1.6 
+     * @param okvirC   defines the frame, title, size and location of a frame (same for other Calculation methods in this class).
+     * @param panelC   defines the panel, and the color of the panel
+     * @param tempFR  the list for "from" values (same for other Calculation methods in this class).
+     * @param tempTO  the list for "to" values (same for other Calculation methods in this class).
+     
+     * */
 	
 	
 	
@@ -677,9 +703,16 @@ public abstract class Calculation extends CategoriesUnits implements ActionListe
 	
 	
 	
-	
-	
 
+	  /**
+     * @author Vedad Causevic 
+     * JavaSE-1.6 
+     * @param okvirC   defines the frame, title, size and location of a frame (same for other Calculation methods in this class).
+     * @param panelC   defines the panel, and the color of the panel
+     * @param powFR  the list for "from" values (same for other Calculation methods in this class).
+     * @param powTO  the list for "to" values (same for other Calculation methods in this class).
+     
+     * */
 	public void CalculationPower()
 	{
 
@@ -881,7 +914,16 @@ public abstract class Calculation extends CategoriesUnits implements ActionListe
 				 );}
 	
 	
-	
+
+	  /**
+   * @author Harun Djulic
+   * JavaSE-1.6 
+   * @param okvirC   defines the frame, title, size and location of a frame (same for other Calculation methods in this class).
+   * @param panelC   defines the panel, and the color of the panel
+   * @param areaFR  the list for "from" values (same for other Calculation methods in this class).
+   * @param areTO  the list for "to" values (same for other Calculation methods in this class).
+   
+   * */
 	
 	
 	public void CalculationArea()
@@ -1079,22 +1121,15 @@ public abstract class Calculation extends CategoriesUnits implements ActionListe
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+/**
+ * @author Amar Svraka 
+ * JavaSE-1.6 
+ * @param okvirC   defines the frame, title, size and location of a frame (same for other Calculation methods in this class).
+ * @param panelC   defines the panel, and the color of the panel
+ * @param weightsFR  the list for "from" values (same for other Calculation methods in this class).
+ * @param weightsTO  the list for "to" values (same for other Calculation methods in this class).
+ 
+ * */	
 	
 	
 
@@ -1437,6 +1472,19 @@ public abstract class Calculation extends CategoriesUnits implements ActionListe
 	});
 	}}
 	);}
+	
+	
+	/**
+	 * @author Amar Svraka 
+	 * JavaSE-1.6 
+	 * @param okvirC   defines the frame, title, size and location of a frame (same for other Calculation methods in this class).
+	 * @param panelC   defines the panel, and the color of the panel
+	 * @param lengthsFR  the list for "from" values (same for other Calculation methods in this class).
+	 * @param lengthsTO  the list for "to" values (same for other Calculation methods in this class).
+	 
+	 * */
+	
+	
 
 	public void CalculationLength()
 
@@ -1755,9 +1803,15 @@ public abstract class Calculation extends CategoriesUnits implements ActionListe
 							 );}
 	
 	
-	
-	
-	
+	/**
+	 * @author Amar Svraka 
+	 * JavaSE-1.6 
+	 * @param okvirC   defines the frame, title, size and location of a frame (same for other Calculation methods in this class).
+	 * @param panelC   defines the panel, and the color of the panel
+	 * @param volumesFR  the list for "from" values (same for other Calculation methods in this class).
+	 * @param volumesTO  the list for "to" values (same for other Calculation methods in this class).
+	 
+	 * */
 	
 	
 	
@@ -1944,7 +1998,15 @@ public abstract class Calculation extends CategoriesUnits implements ActionListe
 
 
 
-
+	/**
+	 * @author Harun Djulic
+	 * JavaSE-1.6 
+	 * @param okvirC   defines the frame, location of a frame, .
+	 * @param panelC   defines the panel, adds input to the panel.
+	 * @param input    the field in which to input the value to be converted.
+	 * @param round    the field in which to input the value to which the result will be rounded.
+	 * @param roundtip the textArea with few lines of text
+	 * */
 
 
 

@@ -9,7 +9,13 @@ import java.awt.event.MouseEvent;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 
+/**
+* @author Harun Djulic
+* @version JavaSE-1.6 
+* The class defines the frame,panel and "start converting" button.
+*  
 
+*/
 public class StartPage 
 {
 	static JFrame okvir  = new JFrame("CONVERTO");
@@ -17,14 +23,17 @@ public class StartPage
     static JButton dugme = new JButton("start converting");
     static MouseEvent e;
 
+    /**
+    * @author Harun Djulic
+    ** Defines the start frame of the program.
+    * @param panel Adds background image (BKCGRND) to the panel
+    * @param BCKGRND adds the button (dugme) to the background image.
+    * @param dugme adds ActionListener of the EventClass() class.
 
+    */ 
   public static void  StartPageMet ()
 	{
-	     panel.setLayout(null);
-
-		//dugme.setIcon(new ImageIcon	("C:\\users\\Ðulić\\desktop\\convertICON.png"));
-
-       
+	     panel.setLayout(null);   
 
 		JLabel BCKGRND = new JLabel (new ImageIcon("C:\\Users\\Harun\\Desktop\\PROJECT.TEST\\Images\\icons\\convertostart1.jpg")); 
 		panel.add(BCKGRND);
