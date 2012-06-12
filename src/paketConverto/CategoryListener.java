@@ -2,7 +2,7 @@ package paketConverto;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 /**
-* @author Harun Djulic
+* @author Vedad Causevic & Amar Svraka
 * @version JavaSE-1.6 
 * The class implements button listeners (ie. ActionListener), and a method actionPerformed
 *  
@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
 public class CategoryListener extends Calculation implements  ActionListener 
 { 
 	/**
-	    * @author Vedad Causevic
+	    * @author Vedad Causevic & Amar Svraka
 	    * JavaSE-1.6 
 	    * @param izbor gets the Action Command 
 	    * method defines what to do when individual  button from CategoriesUnits panel  is pressed
