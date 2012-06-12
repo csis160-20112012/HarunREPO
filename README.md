@@ -4,10 +4,10 @@
 
 *converTo: a unit converter for more categories :
 
-* ** -currency**
-* ** -weight**
-* ** -temperature**
-* ** -power**
-* ** -area**
-* ** -length**
-* ** -volume**
+* **-currency**
+* **-weight**
+* **-temperature**
+* **-power**
+* **-area**
+* **-length**
+* **-volume**
